@@ -2,7 +2,7 @@
   <div class="container-fluid">
 
     <div class='row p-3'>
-    <div class='col-sm-*'><div class='p-1' style='width:100px'><img class='img-fluid' src="../../static/img/afc.png"></div></div>
+    <div class='col-sm-*'><div class='p-1' style='width:100px'><img class='img-fluid' src="static/img/afc.png"></div></div>
 
     <div class='col'>
       <h5 class='text-dark'>West</h5>
@@ -49,7 +49,7 @@
 
   </div>
     <div class='row border border-bottom-0 border-left-0 border-right-0 border-info p-3'>
-    <div class='col-sm-*'><div class='p-1' style='width:100px'><img class='img-fluid' src="../../static/img/nfc.png"></div></div>
+    <div class='col-sm-*'><div class='p-1' style='width:100px'><img class='img-fluid' src="static/img/nfc.png"></div></div>
 
 
       <div class='col'>
