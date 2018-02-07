@@ -27,7 +27,7 @@
     },
     created () {
       this.teamid = this.$route.params.id
-      this.axios.get('http://devtop:80/nfl_teams.php?id=' + this.teamid).then((response) => {
+      this.axios.get('nfl_teams.php?id=' + this.teamid).then((response) => {
         this.team = response.data
       })
     }

@@ -46,7 +46,7 @@ export default {
     }
   },
   created () {
-    this.axios.get('http://devtop:80/nfl_weather.php').then((response) => {
+    this.axios.get('nfl_weather.php').then((response) => {
       this.liveSchedule = response.data
     })
   }

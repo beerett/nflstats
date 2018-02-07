@@ -11,7 +11,7 @@
           :key='team.id'
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-          <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+          <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
       </ul>
     </div>
     <div class='col'>
@@ -21,7 +21,7 @@
           :key='team.id'
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-          <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+          <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
       </ul>
     </div>
     <div class='col'>
@@ -31,7 +31,7 @@
           :key='team.id'
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-        <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+        <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
       </ul>
     </div>
 
@@ -43,7 +43,7 @@
           :key='team.id'
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-          <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+          <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
       </ul>
     </div>
 
@@ -59,7 +59,7 @@
           :key='team.id'
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-        <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+        <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
 
       </ul>
     </div>
@@ -70,7 +70,7 @@
           :key='team.id'
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-          <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+          <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
 
       </ul>
     </div>
@@ -82,7 +82,7 @@
           :to="`/team/${team.id}`"
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-        <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+        <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
 
       </ul>
     </div>
@@ -94,7 +94,7 @@
           :to="`/team/${team.id}`"
           class='list-group'>
         <li class='list-group-item list-group-item-action list-group-item-dark'>
-          <a :href="`/#/team/${team.ID}`">{{ team.Name }}</a></li>
+          <a :href="`#/team/${team.ID}`">{{ team.Name }}</a></li>
 
       </ul>
   </div>
@@ -144,7 +144,16 @@ export default {
     }
   },
   created () {
-    this.axios.get('http://devtop:80/nfl_teams.php').then((response) => {
+    this.afcWest = []
+    this.afcEast = []
+    this.afcNorth = []
+    this.afcSouth = []
+    this.nfcWest = []
+    this.nfcEast = []
+    this.nfcNorth = []
+    this.nfcSouth = []
+    this.teams = {}
+    this.axios.get('nfl_teams.php').then((response) => {
       this.teams = response.data
       this.teamSort()
     })

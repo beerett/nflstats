@@ -54,11 +54,11 @@ export default {
   },
   created () {
     //  this.teamid = this.$route.params.id
-    this.axios.get('http://devtop:80/nfl_schedule.php').then((response) => {
+    this.axios.get('nfl_schedule.php').then((response) => {
       this.nflschedule = response.data
       console.log(this.nflschedule)
     })
-    this.axios.get('http://devtop:80/nfl_teams.php?match').then((response) => {
+    this.axios.get('nfl_teams.php?match').then((response) => {
       this.teams = response.data
     })
   }
